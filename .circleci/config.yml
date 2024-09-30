@@ -20,7 +20,9 @@ jobs:
       - checkout
       - run:
           name: Run service
-          command: node app.js
+          command: |
+            npm install
+            node app.js
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
